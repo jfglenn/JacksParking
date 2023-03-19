@@ -1,13 +1,10 @@
-from imp import load_module
 import os
-from pyexpat import model
-import tensorflow as tf
-import numpy as np
-from tensorflow import keras
-from keras.models import load_model
-import cv2
-import matplotlib.pyplot as plt
 
+import cv2
+import numpy as np
+import tensorflow as tf
+from keras.models import load_model
+from pyexpat import model
 
 def CheckFileExists():
     if os.path.isfile('models/ParkingSpotStatusModel.h5') is False:
@@ -35,7 +32,7 @@ if __name__ == "__main__":
 
     images = os.listdir(os.path.join('data', 'available'))
     print(len(images))
-    print(SpotStatus(data_dir, folder, images, new_model))
+    print("The are " + str(SpotStatus(data_dir, folder, images, new_model)) + " available spots")
   
 
 
