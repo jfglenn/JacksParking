@@ -24,8 +24,8 @@ def SpotStatus(dataDir, folder, images, model):
 
 
 if __name__ == "__main__":
-    data_dir = 'data'
-    folder = 'available'
+    data_dir = '.'
+    folder = 'test'
 
     CheckFileExists()
     new_model = load_model(os.path.join('models', 'ParkingSpotStatusModel.h5'))
