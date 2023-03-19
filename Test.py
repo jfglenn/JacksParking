@@ -30,7 +30,7 @@ if __name__ == "__main__":
     CheckFileExists()
     new_model = load_model(os.path.join('models', 'ParkingSpotStatusModel.h5'))
 
-    images = os.listdir(os.path.join('data', 'available'))
+    images = os.listdir('test')
     print(len(images))
     print("The are " + str(SpotStatus(data_dir, folder, images, new_model)) + " available spots")
   
